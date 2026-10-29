@@ -22,3 +22,14 @@ def positive_numbers(*numbers):
     result = [x for x in numbers if x > 0]
     return result
 print(positive_numbers(3,5,3,2,5,0,-1,-99))
+
+
+def count_fruits(fruits):
+    result = {}
+    for fruit in fruits:
+        if fruit not in result:
+            result[fruit] = 1
+        else:
+            result[fruit] += 1
+    return result
+print(count_fruits(["Яблоко","Яблоко","Банан"]))

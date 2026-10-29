@@ -15,3 +15,10 @@ def word_length(text):
         result.append(len(words))
     return result
 print(word_length("Hello world"))
+
+
+
+def positive_numbers(*numbers):
+    result = [x for x in numbers if x > 0]
+    return result
+print(positive_numbers(3,5,3,2,5,0,-1,-99))

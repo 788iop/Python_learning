@@ -46,3 +46,12 @@ products = [
     {"name": "Молоко", "price": 80}
 ]
 print(total_price(products))
+
+
+
+def has_pair(numbers,pair):
+    for i in range(len(numbers)-1):
+        if numbers[i] + numbers[i+1] == pair:
+            return "YES"
+    return "NO"
+print(has_pair([1,2,3,4],5))

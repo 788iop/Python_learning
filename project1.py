@@ -33,3 +33,16 @@ def count_fruits(fruits):
             result[fruit] += 1
     return result
 print(count_fruits(["Яблоко","Яблоко","Банан"]))
+
+
+
+
+def total_price(products):
+    result = sum([x["price"] for x in products])
+    return result
+products = [
+    {"name": "Хлеб", "price": 50},
+    {"name": "Сыр", "price": 300},
+    {"name": "Молоко", "price": 80}
+]
+print(total_price(products))

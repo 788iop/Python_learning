@@ -63,3 +63,20 @@ def mirror_numbers(numbers):
     result = numbers + opposite_nums
     return result
 print(mirror_numbers([1,2,3]))
+
+
+
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    @property
+    def area(self):
+        return self.width * self.height
+    @property
+    def perimeter(self):
+        return (self.width + self.height) * 2
+r = Rectangle(5, 10)
+print(r.area)
+print(r.perimeter)

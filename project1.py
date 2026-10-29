@@ -55,3 +55,11 @@ def has_pair(numbers,pair):
             return "YES"
     return "NO"
 print(has_pair([1,2,3,4],5))
+
+
+
+def mirror_numbers(numbers):
+    opposite_nums = numbers[::-1]
+    result = numbers + opposite_nums
+    return result
+print(mirror_numbers([1,2,3]))

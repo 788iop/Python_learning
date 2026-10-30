@@ -72,3 +72,20 @@ class athlete:
     def __str__(self):
         return f'Спортсмен {self.name} бежит со скоростью {self.speed} км/ч'
 print(athlete("788iop",15))
+
+
+
+
+class PiggyBank:
+    def __init__(self,name):
+        self.name = name
+        self.money = 0
+    def add_coin(self,add):
+        self.money += add
+    @property
+    def total(self):
+        return self.money
+p = PiggyBank("Иван")
+p.add_coin(10)
+p.add_coin(5)
+print(p.total)

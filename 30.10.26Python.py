@@ -133,3 +133,18 @@ x = Wallet("Иван")
 x.add_bill(50)
 x.add_bill(100)
 print(x.total)
+
+
+
+def is_amstrong(number):
+    total = []
+    count = len(str(number))
+    numc = number
+    for i in range(count):
+        total.append((number%10) ** count)
+        number = number // 10
+    if sum(total) == numc:
+        return("YES")
+    else:
+        return("NO")
+print(is_amstrong(153))

@@ -1,0 +1,18 @@
+class Student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    def __str__(self):
+        return f'Ученик: {self.name}, Средний балл: {Student(self.name,self.marks).average}'
+    @property
+    def average(self):
+        average_grade = sum(self.marks) / len(self.marks)
+        return average_grade
+class Excellent(Student):
+    def __init__(self,name,marks,scholarship):
+        super().__init__(name,marks)
+        self.scholarship = scholarship
+    def __str__(self):
+        return f'Отличник: {self.name}, Стипендия: {self.scholarship}'
+s1 = Excellent("Иван", [5, 4, 5, 5],20000)
+print(s1)

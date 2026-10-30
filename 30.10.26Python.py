@@ -89,3 +89,12 @@ p = PiggyBank("Иван")
 p.add_coin(10)
 p.add_coin(5)
 print(p.total)
+
+
+
+def get_evens(number):
+    for i in range(number+1):
+        if i % 2 == 0:
+            yield(i)
+for num in get_evens(7):
+    print(num)

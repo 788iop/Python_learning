@@ -52,3 +52,14 @@ def swap_case(text):
             result.append(letter.upper())
     return "".join(result)
 print(swap_case("Hello world!"))
+
+
+
+
+
+def get_even_numbers(numbers):
+    for num in range(numbers):
+        if num % 2 == 0:
+            yield num 
+for i in get_even_numbers(7):
+    print(i)

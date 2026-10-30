@@ -41,3 +41,14 @@ s3 = Student("Артем",[5,5,5,5,2,3,2,2])
 s4 = Student("Кирилл",[4,4,5,3,4,5])
 s5 = Student("Арсений",[4,3,4,2,5,5,5,5,5])
 print(get_best([s1,s2,s3,s4,s5]))
+
+
+def swap_case(text):
+    result = []
+    for letter in text:
+        if letter.upper() == letter:
+            result.append(letter.lower())
+        else:
+            result.append(letter.upper())
+    return "".join(result)
+print(swap_case("Hello world!"))

@@ -148,3 +148,12 @@ def is_amstrong(number):
     else:
         return("NO")
 print(is_amstrong(153))
+
+
+
+
+def is_lucky(number):
+    first_part = sum(int(d) for d in number[:3])
+    last_part = sum(int(d) for d in number[3:])
+    return first_part == last_part
+print(is_lucky("123231"))

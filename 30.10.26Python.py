@@ -116,3 +116,20 @@ def Countdown(number):
         yield(i)
 for num in Countdown(3):
     print(num)
+
+
+
+class Wallet:
+    def __init__(self,name):
+        self.name = name
+        bills = []
+        self.bills = bills
+    def add_bill(self,bill):
+        self.bills.append(bill)
+    @property
+    def total(self):
+        return sum(self.bills)
+x = Wallet("Иван")
+x.add_bill(50)
+x.add_bill(100)
+print(x.total)

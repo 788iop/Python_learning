@@ -63,3 +63,12 @@ def get_even_numbers(numbers):
             yield num 
 for i in get_even_numbers(7):
     print(i)
+
+
+class athlete:
+    def __init__(self,name,speed):
+        self.name = name
+        self.speed = speed
+    def __str__(self):
+        return f'Спортсмен {self.name} бежит со скоростью {self.speed} км/ч'
+print(athlete("788iop",15))

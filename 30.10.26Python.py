@@ -16,3 +16,28 @@ class Excellent(Student):
         return f'Отличник: {self.name}, Стипендия: {self.scholarship}'
 s1 = Excellent("Иван", [5, 4, 5, 5],20000)
 print(s1)
+
+
+
+class Student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    def __str__(self):
+        return f'Ученик: {self.name}, Средний балл: {self.average}'
+    @property
+    def average(self):
+        average_grade = sum(self.marks) / len(self.marks)
+        return average_grade
+def get_best(students):
+    filtered = filter(lambda s: s.average >= 4.5,students)
+    names = map(lambda s: s.name,filtered)
+    best = sorted(names)
+    return best
+
+s1 = Student("Иван", [5, 4, 5, 5])
+s2 = Student("Марк",[4,3,2,4,4,5])
+s3 = Student("Артем",[5,5,5,5,2,3,2,2])
+s4 = Student("Кирилл",[4,4,5,3,4,5])
+s5 = Student("Арсений",[4,3,4,2,5,5,5,5,5])
+print(get_best([s1,s2,s3,s4,s5]))

@@ -108,3 +108,11 @@ def powers_two(number):
         num = num * 2
 for num in powers_two(20):
     print(num)
+
+
+
+def Countdown(number):
+    for i in range(number,0,-1):
+        yield(i)
+for num in Countdown(3):
+    print(num)

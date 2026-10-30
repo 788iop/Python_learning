@@ -98,3 +98,13 @@ def get_evens(number):
             yield(i)
 for num in get_evens(7):
     print(num)
+
+
+
+def powers_two(number):
+    num = 1
+    while num < number:
+        yield(num)
+        num = num * 2
+for num in powers_two(20):
+    print(num)

@@ -44,3 +44,19 @@ def repeat_three_times(func):
 def say_hi(name):
     print(f'Привет, {name}!')
 say_hi("Иван")
+
+
+
+import functools
+def check_age(func):
+    def wrapper(age):
+        if age < 18:
+            print(f'Доступ запрещен')
+            return
+        else:
+            return func(age)
+    return wrapper
+@check_age
+def buy_alhocol(age_1):
+    print(f'Покупка прошла успешно!')
+buy_alhocol(18)

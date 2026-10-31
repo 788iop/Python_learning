@@ -31,3 +31,16 @@ def hello(func):
 def test():
     print(f'Пишу Hello world!')
 test()
+
+
+
+import functools
+def repeat_three_times(func):
+    def wrapper(*args,**kwargs):
+        for I in range(3):
+           func(*args,**kwargs)
+    return wrapper
+@repeat_three_times
+def say_hi(name):
+    print(f'Привет, {name}!')
+say_hi("Иван")

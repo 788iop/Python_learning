@@ -16,3 +16,18 @@ def unique_items(numbers):
             total.append(numbers[I])
 for num in unique_items([1,2,2,2,3,4,4,5,6]):
     print(num)
+
+
+
+
+import functools
+def hello(func):
+    def wrapper():
+        print(f'Привет! Начинаю работу!')
+        func()
+        print(f'Готово')
+    return wrapper
+@hello
+def test():
+    print(f'Пишу Hello world!')
+test()

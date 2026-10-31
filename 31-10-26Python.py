@@ -76,3 +76,19 @@ def square(n):
     return n ** 2
 print(square(4))
 print(square(3))
+
+
+
+import functools
+def repeat(num):
+    def decorator(func):
+        def wrapper():
+            for i in range(num):
+                func()
+        return wrapper
+    return decorator
+@repeat(3)
+def say_hi():
+    print("Привет!")
+
+say_hi()

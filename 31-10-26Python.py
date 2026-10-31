@@ -92,3 +92,21 @@ def say_hi():
     print("Привет!")
 
 say_hi()
+
+
+
+import functools
+def count_calls(func):
+    def wrapper():
+        wrapper.count += 1
+        func()
+        return wrapper.count
+    wrapper.count = 0
+    return wrapper
+@count_calls
+def test():
+    pass
+
+print(test())
+print(test())
+print(test())

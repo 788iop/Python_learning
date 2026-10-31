@@ -60,3 +60,19 @@ def check_age(func):
 def buy_alhocol(age_1):
     print(f'Покупка прошла успешно!')
 buy_alhocol(18)
+
+
+
+import functools
+def only_even(func):
+    def wrapper(num):
+        if num % 2 == 0:
+            return func(num)
+        else:
+            return f'Ошибка: число нечетное'
+    return wrapper
+@only_even
+def square(n):
+    return n ** 2
+print(square(4))
+print(square(3))

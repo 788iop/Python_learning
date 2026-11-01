@@ -12,3 +12,18 @@ def make_receipt(*items):
     result += f'Итого: {len(items)} шт.'
     return result
 print(make_receipt("Хлеб", "Молоко"))
+
+
+import time
+class Timer:
+    def __init__(self):
+        pass
+    def __enter__(self):
+        self.start_time = time.time()
+        return self
+    def __exit__(self,exc_type,exc_val,exc_tb):
+        end_time = time.time()
+        timered = end_time - self.start_time
+        print(f'Время работы: {timered:.4f} сек')
+with Timer():
+    sum(range(100000000)) 
